@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="Editor.md,editor,Markdown Editor,Markdown">
+    <meta name="description" content="Skills Network Author IDE">
+    <title>Skills Network Editor</title>
+    <link rel="stylesheet" href="Skills%20Network%20Editor_files/style.css">
+    <link rel="stylesheet" href="Skills%20Network%20Editor_files/editormd.css">
+    <link rel="stylesheet" href="Skills%20Network%20Editor_files/custom.css">
+    <link rel="stylesheet" href="Skills%20Network%20Editor_files/custom_popover.css">
+    <link rel="shortcut icon" href="https://author-ide.skills.network/public/images/SN_favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="Skills%20Network%20Editor_files/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="Skills%20Network%20Editor_files/comms.js"></script>
+    <script src="Skills%20Network%20Editor_files/cdn.min.js"></script>
+<script type="application/ld+json">{"@context":"http://schema.org/","@type":"Article"}</script><script id="editormd-lib-xss" type="text/javascript" src="Skills%20Network%20Editor_files/xss.js"></script><link type="text/css" rel="stylesheet" href="Skills%20Network%20Editor_files/codemirror.min.css"><link type="text/css" rel="stylesheet" href="Skills%20Network%20Editor_files/foldgutter.css"><script id="editormd-lib-codemirror-codemirror-min" type="text/javascript" src="Skills%20Network%20Editor_files/codemirror.min.js"></script><link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"><script type="text/javascript" src="Skills%20Network%20Editor_files/popup.js" async=""></script><script type="text/javascript" src="Skills%20Network%20Editor_files/tat_popup.js" async=""></script><style type="text/css">.resize-observer[data-v-8859cc6c]{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;border:none;background-color:transparent;pointer-events:none;display:block;overflow:hidden;opacity:0}.resize-observer[data-v-8859cc6c] object{display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:-1}</style><script id="editormd-lib-codemirror-modes-min" type="text/javascript" src="Skills%20Network%20Editor_files/modes.min.js"></script><script id="editormd-lib-codemirror-addons-min" type="text/javascript" src="Skills%20Network%20Editor_files/addons.min.js"></script><link type="text/css" rel="stylesheet" href="Skills%20Network%20Editor_files/pastel-on-dark.css"><script id="editormd-lib-marked-min" type="text/javascript" src="Skills%20Network%20Editor_files/marked.min.js"></script><script id="editormd-lib-prettify-min" type="text/javascript" src="Skills%20Network%20Editor_files/prettify.min.js"></script><script id="editormd-lib-raphael-min" type="text/javascript" src="Skills%20Network%20Editor_files/raphael.min.js"></script><script id="editormd-lib-underscore-min" type="text/javascript" src="Skills%20Network%20Editor_files/underscore.min.js"></script><script id="editormd-lib-flowchart-min" type="text/javascript" src="Skills%20Network%20Editor_files/flowchart.min.js"></script><script id="editormd-lib-jquery-flowchart-min" type="text/javascript" src="Skills%20Network%20Editor_files/jquery.flowchart.min.js"></script><script id="editormd-lib-sequence-diagram-min" type="text/javascript" src="Skills%20Network%20Editor_files/sequence-diagram.min.js"></script><link type="text/css" rel="stylesheet" href="Skills%20Network%20Editor_files/katex.min.css"><script id="https:-cdnjs-cloudflare-com-ajax-libs-KaTeX-0-15-6-katex-min" type="text/javascript" src="Skills%20Network%20Editor_files/katex.min.js"></script></head>
+
+<body data-new-gr-c-s-check-loaded="8.912.0" data-gr-ext-installed="" ap-style="" style="overflow: hidden;"><div hidden="" id="sprite-plyr"><!--?xml version="1.0" encoding="UTF-8"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><symbol id="plyr-airplay" viewBox="0 0 18 18"><path d="M16 1H2a1 1 0 00-1 1v10a1 1 0 001 1h3v-2H3V3h12v8h-2v2h3a1 1 0 001-1V2a1 1 0 00-1-1z"></path><path d="M4 17h10l-5-6z"></path></symbol><symbol id="plyr-captions-off" viewBox="0 0 18 18"><path d="M1 1c-.6 0-1 .4-1 1v11c0 .6.4 1 1 1h4.6l2.7 2.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3l2.7-2.7H17c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1H1zm4.52 10.15c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41C8.47 4.96 7.46 3.76 5.5 3.76c-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69zm7.57 0c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41c-.28-1.15-1.29-2.35-3.25-2.35-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69z" fill-rule="evenodd" fill-opacity=".5"></path></symbol><symbol id="plyr-captions-on" viewBox="0 0 18 18"><path d="M1 1c-.6 0-1 .4-1 1v11c0 .6.4 1 1 1h4.6l2.7 2.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3l2.7-2.7H17c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1H1zm4.52 10.15c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41C8.47 4.96 7.46 3.76 5.5 3.76c-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69zm7.57 0c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41c-.28-1.15-1.29-2.35-3.25-2.35-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69z" fill-rule="evenodd"></path></symbol><symbol id="plyr-download" viewBox="0 0 18 18"><path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z"></path></symbol><symbol id="plyr-enter-fullscreen" viewBox="0 0 18 18"><path d="M10 3h3.6l-4 4L11 8.4l4-4V8h2V1h-7zM7 9.6l-4 4V10H1v7h7v-2H4.4l4-4z"></path></symbol><symbol id="plyr-exit-fullscreen" viewBox="0 0 18 18"><path d="M1 12h3.6l-4 4L2 17.4l4-4V17h2v-7H1zM16 .6l-4 4V1h-2v7h7V6h-3.6l4-4z"></path></symbol><symbol id="plyr-fast-forward" viewBox="0 0 18 18"><path d="M7.875 7.171L0 1v16l7.875-6.171V17L18 9 7.875 1z"></path></symbol><symbol id="plyr-logo-vimeo" viewBox="0 0 18 18"><path d="M17 5.3c-.1 1.6-1.2 3.7-3.3 6.4-2.2 2.8-4 4.2-5.5 4.2-.9 0-1.7-.9-2.4-2.6C5 10.9 4.4 6 3 6c-.1 0-.5.3-1.2.8l-.8-1c.8-.7 3.5-3.4 4.7-3.5 1.2-.1 2 .7 2.3 2.5.3 2 .8 6.1 1.8 6.1.9 0 2.5-3.4 2.6-4 .1-.9-.3-1.9-2.3-1.1.8-2.6 2.3-3.8 4.5-3.8 1.7.1 2.5 1.2 2.4 3.3z"></path></symbol><symbol id="plyr-logo-youtube" viewBox="0 0 18 18"><path d="M16.8 5.8c-.2-1.3-.8-2.2-2.2-2.4C12.4 3 9 3 9 3s-3.4 0-5.6.4C2 3.6 1.3 4.5 1.2 5.8 1 7.1 1 9 1 9s0 1.9.2 3.2c.2 1.3.8 2.2 2.2 2.4C5.6 15 9 15 9 15s3.4 0 5.6-.4c1.4-.3 2-1.1 2.2-2.4.2-1.3.2-3.2.2-3.2s0-1.9-.2-3.2zM7 12V6l5 3-5 3z"></path></symbol><symbol id="plyr-muted" viewBox="0 0 18 18"><path d="M12.4 12.5l2.1-2.1 2.1 2.1 1.4-1.4L15.9 9 18 6.9l-1.4-1.4-2.1 2.1-2.1-2.1L11 6.9 13.1 9 11 11.1zM3.786 6.008H.714C.286 6.008 0 6.31 0 6.76v4.512c0 .452.286.752.714.752h3.072l4.071 3.858c.5.3 1.143 0 1.143-.602V2.752c0-.601-.643-.977-1.143-.601L3.786 6.008z"></path></symbol><symbol id="plyr-pause" viewBox="0 0 18 18"><path d="M6 1H3c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h3c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zm6 0c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h3c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1h-3z"></path></symbol><symbol id="plyr-pip" viewBox="0 0 18 18"><path d="M13.293 3.293L7.022 9.564l1.414 1.414 6.271-6.271L17 7V1h-6z"></path><path d="M13 15H3V5h5V3H2a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1v-6h-2v5z"></path></symbol><symbol id="plyr-play" viewBox="0 0 18 18"><path d="M15.562 8.1L3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8z"></path></symbol><symbol id="plyr-restart" viewBox="0 0 18 18"><path d="M9.7 1.2l.7 6.4 2.1-2.1c1.9 1.9 1.9 5.1 0 7-.9 1-2.2 1.5-3.5 1.5-1.3 0-2.6-.5-3.5-1.5-1.9-1.9-1.9-5.1 0-7 .6-.6 1.4-1.1 2.3-1.3l-.6-1.9C6 2.6 4.9 3.2 4 4.1 1.3 6.8 1.3 11.2 4 14c1.3 1.3 3.1 2 4.9 2 1.9 0 3.6-.7 4.9-2 2.7-2.7 2.7-7.1 0-9.9L16 1.9l-6.3-.7z"></path></symbol><symbol id="plyr-rewind" viewBox="0 0 18 18"><path d="M10.125 1L0 9l10.125 8v-6.171L18 17V1l-7.875 6.171z"></path></symbol><symbol id="plyr-settings" viewBox="0 0 18 18"><path d="M16.135 7.784a2 2 0 01-1.23-2.969c.322-.536.225-.998-.094-1.316l-.31-.31c-.318-.318-.78-.415-1.316-.094a2 2 0 01-2.969-1.23C10.065 1.258 9.669 1 9.219 1h-.438c-.45 0-.845.258-.997.865a2 2 0 01-2.969 1.23c-.536-.322-.999-.225-1.317.093l-.31.31c-.318.318-.415.781-.093 1.317a2 2 0 01-1.23 2.969C1.26 7.935 1 8.33 1 8.781v.438c0 .45.258.845.865.997a2 2 0 011.23 2.969c-.322.536-.225.998.094 1.316l.31.31c.319.319.782.415 1.316.094a2 2 0 012.969 1.23c.151.607.547.865.997.865h.438c.45 0 .845-.258.997-.865a2 2 0 012.969-1.23c.535.321.997.225 1.316-.094l.31-.31c.318-.318.415-.781.094-1.316a2 2 0 011.23-2.969c.607-.151.865-.547.865-.997v-.438c0-.451-.26-.846-.865-.997zM9 12a3 3 0 110-6 3 3 0 010 6z"></path></symbol><symbol id="plyr-volume" viewBox="0 0 18 18"><path d="M15.6 3.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4C15.4 5.9 16 7.4 16 9c0 1.6-.6 3.1-1.8 4.3-.4.4-.4 1 0 1.4.2.2.5.3.7.3.3 0 .5-.1.7-.3C17.1 13.2 18 11.2 18 9s-.9-4.2-2.4-5.7z"></path><path d="M11.282 5.282a.909.909 0 000 1.316c.735.735.995 1.458.995 2.402 0 .936-.425 1.917-.995 2.487a.909.909 0 000 1.316c.145.145.636.262 1.018.156a.725.725 0 00.298-.156C13.773 11.733 14.13 10.16 14.13 9c0-.17-.002-.34-.011-.51-.053-.992-.319-2.005-1.522-3.208a.909.909 0 00-1.316 0zm-7.496.726H.714C.286 6.008 0 6.31 0 6.76v4.512c0 .452.286.752.714.752h3.072l4.071 3.858c.5.3 1.143 0 1.143-.602V2.752c0-.601-.643-.977-1.143-.601L3.786 6.008z"></path></symbol></svg></div>
+    <div id="layout">
+    <div id="test-editormd" class="editormd editormd-vertical editormd-theme-dark editormd-fullscreen" style="width: 1920px; height: 965px;">
+        <textarea style="display:none;" class="editormd-markdown-textarea" placeholder="Enjoy Markdown! coding now..." name="test-editormd-markdown-doc">#
+ Helpful Tips for Course Completion
+
+## 1: Familiarize yourself with the course content
+- Browse module overviews and objectives
+- Understand topics and associated assets
+- Familiarize yourself with the content order
+- Identify upcoming topics
+- Connect ideas to create a completion plan for the course
+
+## 2: Form your plan and make a rough timeline for course completion
+- Review completion time estimates for module assets
+- Set a reasonable time goal for each module
+- Determine the course completion deadline
+- Schedule daily study time
+
+## 3: Actively manage your learning
+**Complete your independent tasks:**
+- Take notes during the course
+- Download transcripts for reference
+- Highlight important parts in transcripts
+- Complete all labs
+- Review terms using glossaries
+
+**Get support:**
+- Actively participate in discussion forums
+
+**Pass your quizzes:**
+- Review study notes
+- Complete practice quizzes and review feedback
+- Complete graded quizzes
+- Review related videos or readings for incorrect answers
+- Review video/transcript/reading for correct answers
+- Retake quizzes until you pass them
+
+## 4: Talk with your friends and family about the course
+- Stay accountable, commit to the course
+- Talk to friends and family about it
+- Engage in conversations about interesting topics
+- Seek beneficial perspectives from others
+
+## 5: Follow your plan
+- Stay motivated with your plan
+- Set achievable in step 2
+- Reward yourself upon achieving goals
+
+&lt;footer&gt; 
+
+&lt;img align="left" 
+src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/
+IBMSkillsNetwork-CC0340EN-Coursera/images/SNIBMfooter.png" alt=""&gt; 
+
+&lt;/footer&gt;</textarea><div class="CodeMirror cm-s-pastel-on-dark CodeMirror-wrap" translate="no" style="font-size: 13px; width: 1921px; height: 965px; margin-top: 0px; display: none;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 61px;"><textarea style="position: absolute; bottom: -1em; padding: 0px; width: 1px; height: 1em; min-height: 1em; outline: none;" wrap="off" autocorrect="off" autocapitalize="none" spellcheck="false" disabled="disabled" readonly="readonly" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="bottom: 0px; width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 49px; margin-bottom: 0px; border-right-width: 50px; min-height: 1058px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div style="position: relative; outline: none;" role="presentation"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like" style="position: relative;"><span>xxxxxxxxxx</span><div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>50</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 12px; top: 0px; height: 22.4px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;" class="CodeMirror-activeline"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -49px; width: 54px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 3px; width: 21px;">1</div><div class="CodeMirror-gutter-elt" style="left: 42px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-header cm-header-1"># Helpful Tips for Course Completion</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 3px; width: 21px;">3</div><div class="CodeMirror-gutter-elt" style="left: 42px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-header cm-header-2">## 1: Familiarize yourself with the course content</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Browse module overviews and objectives</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Understand topics and associated assets</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Familiarize yourself with the content order</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Identify upcoming topics</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Connect ideas to create a completion plan for the course</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 3px; width: 21px;">10</div><div class="CodeMirror-gutter-elt" style="left: 42px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-header cm-header-2">## 2: Form your plan and make a rough timeline for course completion</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Review completion time estimates for module assets</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Set a reasonable time goal for each module</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Determine the course completion deadline</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Schedule daily study time</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 3px; width: 21px;">16</div><div class="CodeMirror-gutter-elt" style="left: 42px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-header cm-header-2">## 3: Actively manage your learning</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-strong">**Complete your independent tasks:**</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Take notes during the course</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Download transcripts for reference</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Highlight important parts in transcripts</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Complete all labs</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Review terms using glossaries</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-strong">**Get support:**</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Actively participate in discussion forums</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-strong">**Pass your quizzes:**</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Review study notes</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Complete practice quizzes and review feedback</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Complete graded quizzes</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Review related videos or readings for incorrect answers</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Review video/transcript/reading for correct answers</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">33</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Retake quizzes until you pass them</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">34</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 3px; width: 21px;">35</div><div class="CodeMirror-gutter-elt" style="left: 42px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-header cm-header-2">## 4: Talk with your friends and family about the course</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">36</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Stay accountable, commit to the course</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">37</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Talk to friends and family about it</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">38</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Engage in conversations about interesting topics</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">39</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Seek beneficial perspectives from others</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">40</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 3px; width: 21px;">41</div><div class="CodeMirror-gutter-elt" style="left: 42px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-header cm-header-2">## 5: Follow your plan</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">42</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Stay motivated with your plan</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">43</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Set achievable in step 2</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">44</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable-2">- Reward yourself upon achieving goals</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">45</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">46</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">footer</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-overlay cm-trailingspace"> </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">47</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">48</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">align</span>=<span class="cm-string">"left"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"</span><span class="cm-string cm-link">https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-CC0340EN-Coursera/images/SNIBMfooter.png</span><span class="cm-string">"</span> <span class="cm-attribute">alt</span>=<span class="cm-string">""</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-overlay cm-trailingspace"> </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">49</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -49px;" aria-hidden="true"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">50</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">footer</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent; top: 1058px;"></div><div class="CodeMirror-gutters" style="height: 1108px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div>
+    
+
+<div class="editormd-preview editormd-preview-theme-dark" style="background: rgb(255, 255, 255); top: 0px; width: 1920px; height: 965px;"><div class="md-header" style="z-index:1;"><div class="toolbar"><button class="toc" style="visibility: hidden;"><i class="fa fa-bars" aria-hidden="true" style="margin-right: 15px; display: inline;"></i><p>Table of Contents</p></button><div class="tools">
+        <button value="off" class="tool-icon" id="togglePreviewTheme" title="Toggle preview theme "><i class="fa fa-moon-o mr-1" aria-hidden="true"></i><i class="fa fa-toggle-off" aria-hidden="true"></i></button><button id="audioToggleButton" class="tool-icon " type="button" title="Toggle Audio Section" data-toggle="collapse" aria-expanded="true" aria-controls="#audio-widget-container" data-target="#audio-widget-container">
+                    <i class="fa fa-bullhorn pr-2"></i>
+                </button>
+        <button class="tool-icon" id="print" title="Print instructions"><i class="fa fa-print" aria-hidden="true"></i></button>
+        <button class="tool-icon" id="font-up" title="Increase font size"><i class="fa fa-font" aria-hidden="true"></i><sup>+</sup></button>
+        <button class="tool-icon" id="font-down" title="Decrease font size"><i class="fa fa-font" aria-hidden="true"></i><sup>-</sup></button>
+    </div></div>         <nav class="instruction-progress-bar" aria-label="pagination">             <div class="instruction-progress-fill"></div>             <ul class="pagination"></ul>         </nav></div><div class="table-of-contents"></div><div class="sticky-header" style="z-index:1;"></div>
+                <div id="audio-container">
+                    <div class="collapse " id="audio-widget-container">
+                        <div id="audio-widget" class="disabled">
+                            <i id="audioWarning" class="fa fa-lg fa-exclamation-circle outdated" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="The audio track is being regenerated at the moment, so the currently loaded audio may be outdated. We recommend restarting the page in a couple of minutes to access the latest audio content. Please, contact support if this warning persists for too long." data-original-title="Warning"></i>
+                            <div class="plyr plyr--full-ui plyr--audio plyr--html5 plyr--paused plyr--stopped"><div class="plyr__controls"><button class="plyr__controls__item plyr__control" type="button" data-plyr="play" aria-pressed="false" aria-label="Play"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-pause"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-play"></use></svg><span class="label--pressed plyr__sr-only">Pause</span><span class="label--not-pressed plyr__sr-only">Play</span></button><div class="plyr__controls__item plyr__progress__container"><div class="plyr__progress"><input data-plyr="seek" type="range" min="0" max="100" step="0.01" value="0" autocomplete="off" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="96.171429" aria-valuenow="0" id="plyr-seek-2340" style="--value: 0%;"><progress class="plyr__progress__buffer" min="0" max="100" value="0.772609919313978" role="progressbar" aria-hidden="true">% buffered</progress><span class="plyr__tooltip">00:00</span></div></div><div class="plyr__controls__item plyr__time--current plyr__time" aria-label="Current time" role="timer">01:36</div><div class="plyr__controls__item plyr__volume"><button type="button" class="plyr__control" data-plyr="mute" aria-pressed="false"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-muted"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-volume"></use></svg><span class="label--pressed plyr__sr-only">Unmute</span><span class="label--not-pressed plyr__sr-only">Mute</span></button><input data-plyr="volume" type="range" min="0" max="1" step="0.05" value="1" autocomplete="off" role="slider" aria-label="Volume" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" id="plyr-volume-2340" style="--value: 100%;" aria-valuetext="100.0%"></div><button class="plyr__controls__item plyr__control" type="button" data-plyr="captions" aria-pressed="false"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-captions-on"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-captions-off"></use></svg><span class="label--pressed plyr__sr-only">Disable captions</span><span class="label--not-pressed plyr__sr-only">Enable captions</span></button><div class="plyr__controls__item plyr__menu"><button aria-haspopup="true" aria-controls="plyr-settings-2340" aria-expanded="false" type="button" class="plyr__control" data-plyr="settings" aria-pressed="false"><svg aria-hidden="true" focusable="false"><use xlink:href="#plyr-settings"></use></svg><span class="plyr__sr-only">Settings</span></button><div class="plyr__menu__container" id="plyr-settings-2340" hidden=""><div><div id="plyr-settings-2340-home"><div role="menu"><button data-plyr="settings" type="button" class="plyr__control plyr__control--forward" role="menuitem" aria-haspopup="true" hidden=""><span>Captions<span class="plyr__menu__value">Disabled</span></span></button><button data-plyr="settings" type="button" class="plyr__control plyr__control--forward" role="menuitem" aria-haspopup="true" hidden=""><span>Quality<span class="plyr__menu__value">0</span></span></button><button data-plyr="settings" type="button" class="plyr__control plyr__control--forward" role="menuitem" aria-haspopup="true"><span>Speed<span class="plyr__menu__value">Normal</span></span></button></div></div><div id="plyr-settings-2340-captions" hidden=""><button type="button" class="plyr__control plyr__control--back"><span aria-hidden="true">Captions</span><span class="plyr__sr-only">Go back to previous menu</span></button><div role="menu"></div></div><div id="plyr-settings-2340-quality" hidden=""><button type="button" class="plyr__control plyr__control--back"><span aria-hidden="true">Quality</span><span class="plyr__sr-only">Go back to previous menu</span></button><div role="menu"></div></div><div id="plyr-settings-2340-speed" hidden=""><button type="button" class="plyr__control plyr__control--back"><span aria-hidden="true">Speed</span><span class="plyr__sr-only">Go back to previous menu</span></button><div role="menu"><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="0.5"><span>0.5×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="0.75"><span>0.75×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="true" value="1"><span>Normal</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="1.25"><span>1.25×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="1.5"><span>1.5×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="1.75"><span>1.75×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="2"><span>2×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="4"><span>4×</span></button></div></div></div></div></div><button class="plyr__controls__item plyr__control" type="button" data-plyr="fullscreen" aria-pressed="false"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-exit-fullscreen"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-enter-fullscreen"></use></svg><span class="label--pressed plyr__sr-only">Exit fullscreen</span><span class="label--not-pressed plyr__sr-only">Enter fullscreen</span></button></div><audio crossorigin="" playsinline="" __idm_id__="3653633">
+                                <source src="Skills%20Network%20Editor_files/labs_Helpful_Tips_for_Course_Completion_Text_Only.md.wav" type="audio/mp3">
+                            </audio><button type="button" class="plyr__control plyr__control--overlaid" data-plyr="play" aria-pressed="false" aria-label="Play"><svg aria-hidden="true" focusable="false"><use xlink:href="#plyr-play"></use></svg><span class="plyr__sr-only">Play</span></button></div>
+                        </div>
+                    </div>
+                </div>
+        <div class="markdown-body editormd-preview-container editormd-preview-active" previewcontainer="true"><h1><span class="header-link octicon octicon-link"></span>Helpful Tips for Course Completion</h1><h2><span class="header-link octicon octicon-link"></span>1: Familiarize yourself with the course content</h2><ul>
+<li>Browse module overviews and objectives</li><li>Understand topics and associated assets</li><li>Familiarize yourself with the content order</li><li>Identify upcoming topics</li><li>Connect ideas to create a completion plan for the course</li></ul>
+<h2><span class="header-link octicon octicon-link"></span>2: Form your plan and make a rough timeline for course completion</h2><ul>
+<li>Review completion time estimates for module assets</li><li>Set a reasonable time goal for each module</li><li>Determine the course completion deadline</li><li>Schedule daily study time</li></ul>
+<h2><span class="header-link octicon octicon-link"></span>3: Actively manage your learning</h2><p><strong>Complete your independent tasks:</strong></p>
+<ul>
+<li>Take notes during the course</li><li>Download transcripts for reference</li><li>Highlight important parts in transcripts</li><li>Complete all labs</li><li>Review terms using glossaries</li></ul>
+<p><strong>Get support:</strong></p>
+<ul>
+<li>Actively participate in discussion forums</li></ul>
+<p><strong>Pass your quizzes:</strong></p>
+<ul>
+<li>Review study notes</li><li>Complete practice quizzes and review feedback</li><li>Complete graded quizzes</li><li>Review related videos or readings for incorrect answers</li><li>Review video/transcript/reading for correct answers</li><li>Retake quizzes until you pass them</li></ul>
+<h2><span class="header-link octicon octicon-link"></span>4: Talk with your friends and family about the course</h2><ul>
+<li>Stay accountable, commit to the course</li><li>Talk to friends and family about it</li><li>Engage in conversations about interesting topics</li><li>Seek beneficial perspectives from others</li></ul>
+<h2><span class="header-link octicon octicon-link"></span>5: Follow your plan</h2><ul>
+<li>Stay motivated with your plan</li><li>Set achievable in step 2</li><li>Reward yourself upon achieving goals</li></ul>
+<footer> 
+
+<img src="Skills%20Network%20Editor_files/SNIBMfooter.png" alt=""> 
+
+</footer></div></div>
+<div class="editormd-container-mask" style="display: none;"></div>
+<div class="editormd-mask"></div></div>
+</div>
+<script src="Skills%20Network%20Editor_files/he.min.js"></script>
+<script type="text/javascript" src="Skills%20Network%20Editor_files/iframeResizer.contentWindow.min.js"></script>
+
+<script src="Skills%20Network%20Editor_files/plyr.polyfilled.js"></script>
+<link rel="stylesheet" href="Skills%20Network%20Editor_files/plyr.css">
+<link rel="stylesheet" href="Skills%20Network%20Editor_files/custom_plyr.css">
+
+<script src="Skills%20Network%20Editor_files/jquery.min.js"></script>
+<script src="Skills%20Network%20Editor_files/editormd.js"></script>
+
+<script src="Skills%20Network%20Editor_files/en.js"></script>
+
+<script src="Skills%20Network%20Editor_files/common.js"></script>
+<script src="Skills%20Network%20Editor_files/render.js"></script>
+
+<script type="text/javascript">
+
+
+    var authorEditor = $(function () {
+        let metadata = he.decode('{&quot;markdown-version&quot;:&quot;v1&quot;,&quot;tool-type&quot;:&quot;instructional-lab&quot;,&quot;branch&quot;:&quot;lab-8174-instruction&quot;,&quot;version-history-start-date&quot;:&quot;2023-09-11T19:23:19Z&quot;,&quot;audio-timestamp-of-request-to-generate-wav&quot;:&quot;2024-03-25T20:15:41Z&quot;,&quot;audio-file-url&quot;:&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-CC0340EN-Coursera/labs%2FHelpful_Tips_for_Course_Completion_Text_Only.md.wav&quot;}')
+        injectMetadata(metadata)
+
+        let token = findGetParameter("token");
+
+        let LABS_BASE_URL = 'https://labs.cognitiveclass.ai';
+        let asset_library_prefix_url = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-CC0340EN-Coursera';
+        let tool_type = "instructional-lab";
+        let filename = `labs/Helpful_Tips_for_Course_Completion_Text_Only.md`;
+        let audio = JSON.parse(`{"url":"https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-CC0340EN-Coursera/labs%2FHelpful_Tips_for_Course_Completion_Text_Only.md.wav","isValid":true,"isOutdated":true}`)
+        let currentTheme = localStorage.getItem("theme") || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "default");
+
+        return authorEditor = editormd("test-editormd", "3.3.3", {
+
+            tool_type,
+            filename,
+            audio,
+
+            width: "100%",
+            //height: "100%",
+            autoHeight: true,
+
+            // mode: 'markdown',
+            theme: currentTheme,
+            previewTheme: currentTheme,
+            editorTheme: currentTheme === "dark" ? "pastel-on-dark" : "default",
+
+            readOnly: true,
+
+            pluginPath: 'plugins/',
+
+
+            syncScrolling: false,
+
+            htmlDecode: 'img',
+
+            path: 'editormd/lib/',
+            watch: false,
+
+            // markdown,
+            toolbar: false,
+
+            atLink: false,
+            toc: true,
+            tocm: true,
+            tocDropdown: false,
+            tocTitle: "Table of Contents For your lab!",
+
+            tex: true,
+            flowChart: true,
+            sequenceDiagram: true,
+            codeFold: true, // Doesn't do anything?
+            taskList: true,
+            emoji: true,
+
+            saveMarkdownToTextarea: true,
+
+            onresize: function () {
+                $("html,body").css("overflow", "hidden");
+
+                this.preview.css({
+                    width: $(window).width(),
+                    height: $(window).height()
+                })
+
+                adjustProgressBarWidth()
+            },
+            fixCodeBlocks: function () {
+                adjustCodeBlocks(this);
+            },
+            onload: function () {
+                $("[type=\"file\"]").bind("change", function () {
+                    alert($(this).val());
+                    authorEditor.cm.replaceSelection($(this).val());
+                    console.log($(this).val(), authorEditor);
+                });
+
+                this.fullscreen();
+                this.previewing();
+
+                setPreviewWatchToolbar(this);
+
+                if (tool_type != "instructional-lab") {
+                    fixCustomPlugins(this, 'https://reward.skills.network/claim');
+                }
+                else {
+                    addAudioWidget(this, audio);
+                }
+
+                setAssetLibraryPrefixUrl(asset_library_prefix_url);
+                //comms with UI
+                setParentUrl(LABS_BASE_URL);
+                establishCommsWithUI(this);
+                //let the UI know that the author-ide has loaded
+                requestToUI({ type: "frame_loaded" });
+            }
+        });
+    });
+</script>
+
+
+<script src="Skills%20Network%20Editor_files/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+<div class="ap-ext ap-ext-shopee"><div class="ap-base ap-base--ltr ap-theme--dark skiptranslate"><div> <div class="ap-toolbar ap-toolbar--left"><div class="ap-toolbar__inner"><!----><!----></div></div></div> <!----> <div><!----> <div class="ap-sbi"><!----> <!----> <!----> <div class="ap-sbi-aside"><!----> <div class="ap-sbi-aside-btn-minimize" style="display: none;"><img src="" class="ap-sbi-img-thumb"> <i class="ap-sbi-aside-btn-minimize__icon ap-icon-chevron-right"></i></div> <!----></div></div> <div class="ap-sbi-alibaba-act-wrapper"><div class="ap-sbi-alibaba-act__inner"><div class="ap-sbi-alibaba-act-compared-list-wrapper"><div class="ap-sbi-alibaba-act-next ap-sbi-alibaba-act-next__prev ap-icon-chevron-left ap-is-disabled"></div> <div class="ap-sbi-alibaba-act-compared-list-container"><div class="ap-sbi-alibaba-act-compared-list" style="width: 1000%; height: 100%; transform: translate3d(0px, 0px, 0px);"></div> <!----></div> <div class="ap-sbi-alibaba-act-next ap-sbi-alibaba-act-next__next ap-icon-chevron-right ap-is-disabled"></div></div> <div class="ap-sbi-alibaba-act-ctrls ap-sbi-alibaba-act-ctrls__compare ap-is-disabled">
+      Đối chiếu (0/20)
+    </div> <div class="ap-sbi-alibaba-act-ctrls ap-sbi-alibaba-act-ctrls__contact ap-is-disabled">
+      Tiếp xúc
+    </div> <div class="ap-sbi-alibaba-act-ctrls ap-sbi-alibaba-act-ctrls__clear ap-is-disabled">
+      Làm sạch tất cả
+    </div> <div title="Đóng" class="ap-sbi-alibaba-act-ctrls ap-sbi-alibaba-act-ctrls__close ap-icon-close"></div></div></div> </div> <!----> <div></div> <!----> <!----> <!----> <!----> <!----></div></div></body><template id="transover-popup-template">
+  <style>
+    .pos_translation {
+      padding-bottom: 3px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    .rtl {
+      direction: rtl;
+    }
+
+    main {
+      color: #333;
+      max-width: 800px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: initial;
+
+      background: #fcf7d9;
+      text-align: left;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #ccc;
+      box-shadow: rgba(0,0,0,0.2) 0px 2px 5px;
+      border-radius: 5px;
+      padding: 6px 8px 3px 8px;
+      position: fixed;
+      z-index: 2147483647;
+      top: -1500px;
+      left: 0;
+      box-sizing: content-box;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+
+      /* To fix the following issue:
+      1. Have translate on hover enabled (opposed to translate on click).
+      2. Wisit a website that has a dropdown menu that opens on hover.
+      3. Open the menu.
+      4. Hover over a word within that menu.
+      5. Incidentally move the cursor over the TransOver popup.
+      The hover menu gets closed.
+      */
+      pointer-events: none;
+    }
+
+    .pos_translation {
+      font-size: 1em;
+      line-height: 1.3em;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .from_lang {
+      color: grey;
+      font-size: 0.8em;
+      line-height: 1.2em;
+      margin-top: 2px;
+      margin-bottom: 3px;
+    }
+  </style>
+
+  <main translate="no"></main>
+</template><template id="transover-tat-popup-template">
+  <style>
+    #tat_input_container {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    #tat_input_container label {
+      line-height: 26px;
+    }
+
+    #tat_input {
+      margin-left: 5px;
+      flex-grow: 2;
+      font-size: 14px;
+      line-height: 20px;
+      border-radius: 2px;
+      border: 1px #ccc solid;
+      padding-left: 5px;
+    }
+
+    #tat_submit_container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #tat_submit_container select {
+      margin-left: 5px;
+    }
+
+    #tat_submit {
+      width: 45px;
+      margin-left: 5px;
+    }
+
+    #tat_to_lang {
+      width: 150px;
+    }
+
+    #swap_languages {
+      margin-left: 5px;
+      margin-right: 5px;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEKElEQVR4nL1Vb0xbVRQ/97Xre23pn9FSNmBQGEqGMJQPIyU6MkMczf6gbAyNk5lo9gkTdTPGLPswzRITjcYPftREiYQ/g5EVZZEwNt3ELBmiI/wLqB1rFdaWDaSjfe+e44cHpUAL0URPcnPuu/e887vn3PM7F+A/Fs1mBi+fbNBXPHNgv6ShCa/X+48BhI02T7522lbmrrtsTct8RRCETQ+TSLTJNhreOuvcXXG4y2C1F874vL25BcWP5hWWKgQEAABKNBJZmAvNzIaCi1d6vqVkfliixdfPnH+8eO9BzxaDKQuRgCMRR2KcYhoQgaKRh/PBO+O90yM/fhTy/faD51InrvW1LuzT5z6sLKo4/LVGZ3AoSMARQEEChYgpSKAgMa5qQKaRREvaLmteST0jlHIc5usjw8M8KUBN3Yu2soP1fYLOkLrkDJadxb5pWQMgESASIDHBsC3vSR4Ja3fYUq6OjY1SQoBUq3kxHPT/lJpdUAVaMYUjMQWJKbR8clA1qWniBAyJGKpgTHLklC3cHb469POANyHA1NQUDN66+atNxCuWjJ2VgmhUI+EICkfkiKQOIiRgSKDexxIAAtMQoikjRbg4Pj6OAEmq6KsvPhuok6P7H3n6+ZaUdGep/5fv+vyDfe8AQCy/Wslo3+567n3Rnl1CKgAhEOgceeU6UbQCQCApAABAS1PjZC2XD2S7qr9EpPCD+7MDPT09SrzNcYNFdpQfuUgEAhIBEQAJGpEBmDcFAABoa2mePopYK5pt+2RZXleCi0HftTueTx4jIi1jasUTESHiH8s2MR68cea9Ap1kLCHVCJAAwnOh6ZnfR79vb29f5fzZupcMzpLyd32D1862tTY/3OiQsQiMVvuhQlfVB5xWiPUgOO0LTE3sAQD/qr+4rE0v2vsm0xmdxwTh1dbmpvubAoT+nLotq45haZBoScsorjrRkbn7qTZgQjSWZ0JJQYKtO5+oYaIx7ZigeaG1qdGfCCCWopqjtcZ99W+P64yWDI5EnFTGokou4kgMCUite4L4eTjgG/Jfv1Db3Pj56FqAGA9Ghofl/DynvDV7l3ulJQAotBRRHKEwvvaJQCOZ0vQZ+dW5Nn3/0OCtuwkBAAC228yDW/TGfL0ts4gvMZivtIV49sJaMNLqTJGQb36bReqdnJxM3CrGRkd5ulFzWYkuSnr7jlICjSbOGSzPOREgrKwpclS+13/h47Bv7LzH41lVVQnbtdvt1phT7SXWnKLjkj1rj6DTpxKBQKS+BgRMEB25+UjElMW/Fu7daD0XCfk/7ejoCCe95ETicrmYyWQSRVHUQdzrJ6WYTVmHTnmj88HZwI2WU5G5QFNnZ2c0kY8NAZKJu/qI2Vl54nawv60hPDf7TVdXF09m+6/eWafTyWlm4tLcbOBmd3f3uhbyv8rfG8mfJ968lFgAAAAASUVORK5CYII=);
+      cursor: pointer;
+    }
+
+    #swap_languages.disabled {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEIklEQVR4nL1VX0hbVxj/7k0w6TS3QVck+qC2/tfhiMyRUR8GlU4XNzJYsFBUluXBh/Uho0PBPWww6TbEpzGz+pKBC2OS2tkHRbQd3ZiIdkoVghptdO2MRmP+3Xtzb+759nBNFl0S8WH7weF+nO+7v985h/P7DsB/DMVZBTab7YLJZLouCMKG1+s9twCdLdnf31/Q09MzWVZWZqFp+szFpIMyU2JgYKC0s7Pzga6oqHZ9fX2msbGx0mAwxBN5juNi+/v7e36/n5+cnMRzqQ4NDb3q9/t3JEnCuCRhPB4noiiiIIgkJggYi8WQ53lycHgYnJmddfX29l41mUxZTyMJu91+LRKJBCSZGEVRREEUiSATE57nkeM4ZFmWRKNRjEQieHQUFO+OjAyYzWbVab4T59rd3V1gs9ke5ubm5iMAACJgckBKfHIAIF1TW3s1HAopc3JyHrndbkwrkJeXx29sbPyh1+vfuqBW5yEChYDUMVHql0LyT0wQAZFQlZVVry8sLDxaXFzwphXY3t6Gubm5zXA4PFtXV3eNYZh8RASJEJDiEiESQXlIeCxMISIQJICIFEVRCkmSNKIo3FtbWyMAGW6R3W5/wvP89Y9u3fqxprpG/2Bi4qHL5eoDAClRwzDMyxaL5U55RWUDIgEkiAQRqqqr31CpVFoA8GcUAABwOBweQRDetlgs30uEsIFA4Mn09HQ8tSY/v0C0Wq33CCItHx8BhUKhAgDmTAEAAKfT6ZMk6X2dTvemKIrkdP7Zs61f+vp66xBRSVEUAAAgIhJC/krUUIlgcHCwimGYBvlWyNjb2/MtLS09HhsbO0H+gcXyUktLy+c/37//qdPp5LItMrkDnU7X3tHR8fWxACIitbOz83xlZaUJAF6k/hTjeeU77e02RqMppWn6w9HR0aMzBTwez1OUAQmN4uLiotu3P3EZjcafaJoWjueBEKImBKG5ufk9jUZzSalU3nA4HC8yiQAAgNlszt3d3X0utwSByO0ghhzHI8txJMqyGIlESTgcwVAojMFgiBwdBfEwEMCFxcWnVqu1Oh1v0gerq6tiSUmJqG9sbEXZtgljATltNJKcpxAJXGQuXqqvf+VdmqZ/n5+f/zOtAACAWq1eYhim/HJZWT1mEiAJc8nuRSLHOSqVZmtrM6xUKmc8Hk/6VuF2uyVBECZZllWXV1ToFbRCkeJUOBZIkCdjnuPEkbvfDS0vL38xMTFx4lZRkAatra2KwsLChteamm5euXylSW5+CTMhUEDRVdVV5YQgFQoGo8P24c+2vd5vXC4Xe5orrUACBoOB0mg0KpVKlQMpr59Wq9Xc+fIrr8/nC9iHv/3Y5/P9MD4+LmTjOhfMZjPz+NffvF1dXe1GozHrU5p1B5nQ1tam1Gq1pQcHB5tTU1P/aiH/K/4G7RvFhRjTPe0AAAAASUVORK5CYII=);
+      cursor: auto;
+    }
+
+    main {
+      color: #333;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 19px;
+      letter-spacing: initial;
+
+      background: #fcf7d9;
+      text-align: left;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #ccc;
+      box-shadow: rgba(0,0,0,0.2) 0px 2px 5px;
+      border-radius: 5px;
+      padding: 10px 12px 12px 12px;
+      position: fixed;
+      z-index: 2147483647;
+      top: 15px;
+      right: 15px;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    #disable_on_this_page_container {
+      margin-bottom: 8px;
+      color: blue;
+    }
+
+    #disable_on_this_page_container label {
+      margin-right: 10px;
+    }
+
+    #disable_on_this_page, #disable_everywhere {
+      position: relative;
+      vertical-align: middle;
+      bottom: 1px;
+      margin-right: 5px;
+      margin-left: 0px;
+    }
+
+    #top_row_container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #tat_close{
+      width: 12px;
+      height: 12px;
+      background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, darkgrey 46%, darkgrey 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, darkgrey 46%,  darkgrey 56%,transparent 56%, transparent 100%);
+    }
+  </style>
+
+  <main translate="no">
+    <div id="top_row_container">
+      <div id="disable_on_this_page_container">
+        <label><input id="disable_on_this_page" type="checkbox">Disable on this site</label>
+        <label><input id="disable_everywhere" type="checkbox">Disable everywhere</label>
+      </div>
+      <a href="#" id="tat_close"></a>
+    </div>
+    <div id="tat_input_container">
+      <label for="tat_from_lang">Translate</label>
+      <input id="tat_input" type="text">
+    </div>
+    <div id="tat_submit_container">
+      <label for="tat_from_lang">from</label>
+      <select id="tat_from_lang"></select>
+
+      <div id="swap_languages"></div>
+
+      <label for="tat_to_lang">into</label>
+      <select id="tat_to_lang"></select>
+
+      <input type="submit" id="tat_submit" value="go">
+    </div>
+  </main>
+</template><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
